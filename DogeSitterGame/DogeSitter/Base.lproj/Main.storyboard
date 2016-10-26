@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sA8-yP-QT6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="comicsans.ttf">
+            <string>ComicSansMS</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="DogeSitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="302"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HoJ-ax-5FL">
+            <objects>
+                <viewController id="lcT-ux-AiW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VFS-lr-C7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="P2U-QO-BlW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UYB-gg-04U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dogeStart" translatesAutoresizingMaskIntoConstraints="NO" id="imb-lK-ueg">
+                                <frame key="frameInset" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DogeSitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBW-C3-ymZ">
+                                <frame key="frameInset" minX="20" minY="65" width="560" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="oDf-bx-ehb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrS-Yt-e2Y">
+                                <frame key="frameInset" minX="20" minY="164" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Elv-tp-ABN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="25"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" id="gEY-84-jee"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYS-4r-kFx">
+                                <frame key="frameInset" minX="20" minY="215" width="560" height="33"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="25"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TrB-Ei-DDM" kind="show" id="F0p-mo-iAC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="LBW-C3-ymZ" secondAttribute="leading" id="4Tt-uK-Hzs"/>
+                            <constraint firstItem="imb-lK-ueg" firstAttribute="centerX" secondItem="UYB-gg-04U" secondAttribute="centerX" id="6gb-Ob-o0t"/>
+                            <constraint firstItem="hrS-Yt-e2Y" firstAttribute="top" secondItem="LBW-C3-ymZ" secondAttribute="bottom" constant="13" id="CaV-QH-wr6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xYS-4r-kFx" secondAttribute="leading" id="FA5-7J-nEk"/>
+                            <constraint firstItem="LBW-C3-ymZ" firstAttribute="top" secondItem="VFS-lr-C7a" secondAttribute="bottom" constant="45" id="MJS-H4-SIq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hrS-Yt-e2Y" secondAttribute="leading" id="Pll-zm-hWf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LBW-C3-ymZ" secondAttribute="trailing" id="VZ6-Zn-uyW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xYS-4r-kFx" secondAttribute="trailing" id="m49-yi-IwR"/>
+                            <constraint firstItem="imb-lK-ueg" firstAttribute="centerY" secondItem="UYB-gg-04U" secondAttribute="centerY" id="ngX-ms-DKv"/>
+                            <constraint firstItem="xYS-4r-kFx" firstAttribute="top" secondItem="hrS-Yt-e2Y" secondAttribute="bottom" constant="13" id="ofu-Rx-Yoy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hrS-Yt-e2Y" secondAttribute="trailing" id="xaL-9p-bfv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ppN-7x-K4y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gZ-qc-g6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="302"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="upH-Of-y7Q">
+            <objects>
+                <viewController id="TrB-Ei-DDM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ksn-KN-SkR"/>
+                        <viewControllerLayoutGuide type="bottom" id="H0b-sV-IrS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ld6-tQ-gYn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dogeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="LAl-iO-b4X">
+                                <frame key="frameInset" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flick the frisbee for doge to catch. Doge needs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA5-cN-LZs">
+                                <frame key="frameInset" minX="20" minY="418" width="560" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="you can before the time runs out! The amount of" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV3-gn-6hr">
+                                <frame key="frameInset" minX="20" minY="327" width="560" height="27"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="doge tiles you need to press will increase as you " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-L9-hU5">
+                                <frame key="frameInset" minX="20" minY="345" width="560" height="27"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="conquer each level." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wki-70-CCm">
+                                <frame key="frameInset" minX="20" minY="364" width="560" height="27"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to catch the set amount of frisbees before the " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeG-fo-IGv">
+                                <frame key="frameInset" minX="20" minY="437" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time runs out." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-PS-meL">
+                                <frame key="frameInset" minX="20" minY="453" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="the screen left/right so that doge can catch " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-ST-1V1">
+                                <frame key="frameInset" minX="20" minY="535" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The game will end if the ball misses doge and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-Tv-Yrh">
+                                <frame key="frameInset" minX="20" minY="553" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hits the ground." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-9D-8HQ">
+                                <frame key="frameInset" minX="20" minY="571" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fetch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-2V-hNx">
+                                <frame key="frameInset" minX="20" minY="485" width="560" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balls will drop from the top of the screen. Tilt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCp-0m-9Ws">
+                                <frame key="frameInset" minX="20" minY="516" width="560" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmC-Ib-j6V">
+                                <frame key="frameInset" minX="20" minY="72" width="560" height="64"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frisbee Catch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5m-up-Rkr">
+                                <frame key="frameInset" minX="20" minY="399" width="560" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Don't Touch the Grumpy Cat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKR-5E-R0R">
+                                <frame key="frameInset" minX="20" minY="284" width="560" height="35"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Touch the set amount of doge tiles as fast as " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epA-57-G2S">
+                                <frame key="frameInset" minX="20" minY="312" width="560" height="25"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LAl-iO-b4X" firstAttribute="centerX" secondItem="Ld6-tQ-gYn" secondAttribute="centerX" id="5z2-Yb-3HH"/>
+                            <constraint firstItem="LAl-iO-b4X" firstAttribute="centerY" secondItem="Ld6-tQ-gYn" secondAttribute="centerY" id="FHx-rd-4AC"/>
+                            <constraint firstItem="DV3-gn-6hr" firstAttribute="top" secondItem="epA-57-G2S" secondAttribute="bottom" constant="-10" id="HcG-Em-lkJ"/>
+                            <constraint firstItem="NmC-Ib-j6V" firstAttribute="top" secondItem="Ksn-KN-SkR" secondAttribute="bottom" constant="8" id="MaY-ZO-A37"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MKR-5E-R0R" secondAttribute="trailing" id="O7I-zJ-epv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NmC-Ib-j6V" secondAttribute="leading" id="Oa0-K6-XQo"/>
+                            <constraint firstItem="ar9-L9-hU5" firstAttribute="top" secondItem="DV3-gn-6hr" secondAttribute="bottom" constant="-9" id="ROz-4N-jfc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MKR-5E-R0R" secondAttribute="leading" id="VcK-Wf-Nev"/>
+                            <constraint firstItem="epA-57-G2S" firstAttribute="top" secondItem="MKR-5E-R0R" secondAttribute="bottom" constant="-7" id="exL-eS-gFs"/>
+                            <constraint firstItem="MKR-5E-R0R" firstAttribute="top" secondItem="NmC-Ib-j6V" secondAttribute="bottom" constant="148" id="gMV-xb-8TL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NmC-Ib-j6V" secondAttribute="trailing" id="npb-kN-ijG"/>
+                            <constraint firstItem="Wki-70-CCm" firstAttribute="top" secondItem="ar9-L9-hU5" secondAttribute="bottom" constant="-8" id="wh8-he-aDR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVt-If-IXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="1107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iea-pc-uA2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sA8-yP-QT6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9eh-vo-spy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lcT-ux-AiW" kind="relationship" relationship="rootViewController" id="co0-Sp-jhL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VX-t6-Jps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dogeBackground" width="414" height="736"/>
+        <image name="dogeStart" width="414" height="736"/>
+    </resources>
+</document>
