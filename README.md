@@ -27,7 +27,7 @@ doge.
 * Show score and keep track of high score
 
 ## Control Flow
-* The user will be presented with the Start Scree which enables returning
+* The user will be presented with the Start Screen which enables returning
   users to choose "Start" or "Instructions"
 * If "Instructons" is touched, then a new view displaying the rules will
   appear. Players may navigate back to the start screen.
